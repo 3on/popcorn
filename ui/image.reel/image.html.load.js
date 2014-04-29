@@ -1,0 +1,1 @@
+montageDefine("5fd1bbd","ui/image.reel/image.html",{text:'<!DOCTYPE html><html><head>\n    <script type=text/montage-serialization>{"owner":{"prototype":"ui/image.reel","properties":{"element":{"#":"Image"}}}}</script>\n</head>\n<body>\n    <div data-montage-id=Image class=Image></div>\n\n\n</body></html>'});

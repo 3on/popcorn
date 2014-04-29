@@ -1,0 +1,1 @@
+{"name":"Popcorn","version":"0.2.0","dependencies":{"montage":"~0.14.2","matte":"~0.2.0"},"devDependencies":{"montage-testing":"~0.4.0"},"hash":"5fd1bbd","mappings":{"montage":{"name":"montage","hash":"fb96f7e","location":"packages/montage@fb96f7e/"},"matte":{"name":"matte","hash":"3d5d36e","location":"packages/matte@3d5d36e/"}},"production":true,"useScriptInjection":true}

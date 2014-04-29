@@ -1,0 +1,1 @@
+montageDefine("5fd1bbd","adasad",{dependencies:["montage/core/core"],factory:function(e,o){var a=e("montage/core/core").Montage;o.Adasad=a.specialize({constructor:{value:function(){this.super()}}})}});

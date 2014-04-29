@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="moviepopup.css" />
+    <script src="http://www.youtube.com/player_api"></script>
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"moviepopup"},"player":{"#":"iframe"}}},"closeButton":{"prototype":"matte/ui/button.reel","properties":{"element":{"#":"close-button"},"contenteditable":"true","dir":"ltr","draggable":"true","formenctype":"application/x-www-form-urlencoded","formmethod":"get","type":"button"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"date":{"prototype":"matte/ui/input-date.reel","properties":{"element":{"#":"date"},"contenteditable":"true","dir":"ltr","draggable":"true","type":"button"}}}</script>
+</head>
+<body>
+    <div data-montage-id="moviepopup" class="moviepopup">
+        <button data-montage-id="close-button" class="button button-close">
+            ✕
+        </button>
+        <iframe data-montage-id="iframe" class="montage-youtube-player" type="text/html" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+        ​
+        <input type="date" data-montage-id="date" />
+    </div>
+
+</body></html>

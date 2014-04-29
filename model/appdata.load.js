@@ -1,0 +1,1 @@
+montageDefine("5fd1bbd","model/appdata",{dependencies:["montage"],factory:function(e,n){var o=e("montage").Montage;n.AppData=o.specialize({latestBoxofficeMovies:{value:null},upcomingMovies:{value:null},topDvdRentals:{value:null},inTheaters:{value:null}})}});

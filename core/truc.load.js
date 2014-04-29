@@ -1,0 +1,1 @@
+montageDefine("5fd1bbd","core/truc",{dependencies:["montage/core/core"],factory:function(e,o){var r=e("montage/core/core").Montage;o.Truc=r.specialize({constructor:{value:function(){this.super()}}})}});
