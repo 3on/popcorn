@@ -51,16 +51,10 @@
                 "upcomingMovies": {"<-": "@owner.appData.upcomingMovies"}
             }
         },
-        "image": {
-            "prototype": "montage-native/ui/image.reel",
+        "inputDate": {
+            "prototype": "montage-native/ui/input-date.reel",
             "properties": {
-                "element": {"#": "image"}
-            }
-        },
-        "inputNumber": {
-            "prototype": "montage-native/ui/input-number.reel",
-            "properties": {
-                "element": {"#": "inputNumber"}
+                "element": {"#": "inputDate"}
             }
         },
         "latest": {
@@ -82,12 +76,6 @@
             "prototype": "ui/moviepopup.reel",
             "properties": {
                 "element": {"#": "popup"}
-            }
-        },
-        "tabs": {
-            "prototype": "montage-tabs/ui/tabs.reel",
-            "properties": {
-                "element": {"#": "tabs"}
             }
         },
         "theaters": {
@@ -153,6 +141,7 @@
         <div data-montage-id="tabs"></div>
         <div data-montage-id="image"></div>
         <div data-montage-id="inputNumber"></div>
+        <div data-montage-id="inputDate"></div>
     </div>
 </body>
 </html>
