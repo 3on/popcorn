@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Main</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <script type="text/montage-serialization">
     {
@@ -11,7 +13,30 @@
                 "element": {"#": "main"}
             }
         },
-
+        "details": {
+            "prototype": "ui/details.reel",
+            "properties": {
+                "element": {"#": "details"}
+            },
+            "bindings": {
+                "data": {"<-": "@facadeflow.selectedMovie"}
+            }
+        },
+        "dvd": {
+            "prototype": "matte/ui/toggle-button.reel",
+            "properties": {
+                "element": {"#": "dvd"},
+                "category": "topDvdRentals",
+                "identifier": "categoryButton",
+                "pressedClass": "selected"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
         "facadeflow": {
             "prototype": "ui/facadeflow.reel",
             "properties": {
@@ -19,31 +44,20 @@
                 "details": {"@": "details"}
             },
             "bindings": {
-                "latestBoxofficeMovies": {"<-": "@owner.appData.latestBoxofficeMovies" },
-                "upcomingMovies": {"<-": "@owner.appData.upcomingMovies" },
-                "topDvdRentals": {"<-": "@owner.appData.topDvdRentals" },
-                "inTheaters": {"<-": "@owner.appData.inTheaters" },
-                "categoryId": {"<-": "@owner.categoryId"}
+                "categoryId": {"<-": "@owner.categoryId"},
+                "inTheaters": {"<-": "@owner.appData.inTheaters"},
+                "latestBoxofficeMovies": {"<-": "@owner.appData.latestBoxofficeMovies"},
+                "topDvdRentals": {"<-": "@owner.appData.topDvdRentals"},
+                "upcomingMovies": {"<-": "@owner.appData.upcomingMovies"}
             }
         },
-
-        "details": {
-            "prototype": "ui/details.reel",
-            "properties": {
-                "element": {"#": "details"}
-            },
-            "bindings": {
-                "data": {"<-": "@facadeflow.selectedMovie" }
-            }
-        },
-
         "latest": {
             "prototype": "matte/ui/toggle-button.reel",
             "properties": {
                 "element": {"#": "latest"},
+                "category": "latestBoxofficeMovies",
                 "identifier": "categoryButton",
-                "pressedClass": "selected",
-                "category": "latestBoxofficeMovies"
+                "pressedClass": "selected"
             },
             "listeners": [
                 {
@@ -52,72 +66,67 @@
                 }
             ]
         },
-
-        "theaters": {
-            "prototype": "matte/ui/toggle-button.reel",
-            "properties": {
-                "element": {"#": "theaters"},
-                "identifier": "categoryButton",
-                "pressedClass": "selected",
-                "category": "inTheaters"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-
-        "dvd": {
-            "prototype": "matte/ui/toggle-button.reel",
-            "properties": {
-                "element": {"#": "dvd"},
-                "identifier": "categoryButton",
-                "pressedClass": "selected",
-                "category": "topDvdRentals"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-
-        "upcoming": {
-            "prototype": "matte/ui/toggle-button.reel",
-            "properties": {
-                "element": {"#": "upcoming"},
-                "identifier": "categoryButton",
-                "pressedClass": "selected",
-                "category": "upcomingMovies"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-
         "popup": {
             "prototype": "ui/moviepopup.reel",
             "properties": {
                 "element": {"#": "popup"}
             }
+        },
+        "tabs": {
+            "prototype": "montage-tabs/ui/tabs.reel",
+            "properties": {
+                "element": {"#": "tabs"}
+            }
+        },
+        "theaters": {
+            "prototype": "matte/ui/toggle-button.reel",
+            "properties": {
+                "element": {"#": "theaters"},
+                "category": "inTheaters",
+                "identifier": "categoryButton",
+                "pressedClass": "selected"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "upcoming": {
+            "prototype": "matte/ui/toggle-button.reel",
+            "properties": {
+                "element": {"#": "upcoming"},
+                "category": "upcomingMovies",
+                "identifier": "categoryButton",
+                "pressedClass": "selected"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" class="Main">
-        <img class="logo" src="../../assets/image/logo.png" alt="logo" />
+        <img class="logo" src="../../assets/image/logo.png" alt="logo">
         <div class="filter">
-            <button data-montage-id="latest" class="box_office">Box office</button>
-            <button data-montage-id="theaters" class="in_theaters">In theaters</button>
-            <button data-montage-id="upcoming" class="upcoming">Upcoming</button>
-            <button data-montage-id="dvd" class="rentals">Rentals</button>
+            <button data-montage-id="latest" class="box_office">
+                Box office
+            </button>
+            <button data-montage-id="theaters" class="in_theaters">
+                In theaters
+            </button>
+            <button data-montage-id="upcoming" class="upcoming">
+                Upcoming
+            </button>
+            <button data-montage-id="dvd" class="rentals">
+                Rentals
+            </button>
         </div>
         <div class="facadeWindow">
             <div data-montage-id="facade" class="facade">
@@ -125,9 +134,11 @@
             </div>
             <div data-montage-id="details" class="details"></div>
         </div>
-
-        <a class="MontageMade" href="http://montagejs.org">Made with Montage</a>
+        <a class="MontageMade" href="http://montagejs.org">
+            Made with Montage
+        </a>
         <div data-montage-id="popup" class="popup"></div>
+        <div data-montage-id="tabs"></div>
     </div>
 </body>
 </html>
