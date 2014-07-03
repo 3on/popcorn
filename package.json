@@ -3,8 +3,7 @@
     "version": "0.2.0",
     "dependencies": {
         "montage": "~0.14.2",
-        "matte": "~0.2.0",
-        "montage-native": "0.1.0"
+        "matte": "~0.2.0"
     },
     "devDependencies": {
         "montage-testing": "~0.4.0"
